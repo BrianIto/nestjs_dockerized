@@ -1,0 +1,10 @@
+services:
+  nestjs-api:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - elasticsearch
+    volumes:
+      - .:/app
+      - /app/node_modules
